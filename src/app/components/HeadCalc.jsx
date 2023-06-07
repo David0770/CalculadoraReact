@@ -1,7 +1,10 @@
 "use client"
-import { useState } from "react";
+
 export default function HeadCalc() {
-    
+
+    const changeTheme = (newTheme) => {
+        updateTheme(newTheme);
+    }
 
     return (
 
@@ -13,14 +16,14 @@ export default function HeadCalc() {
                 </div>
                 <div className="flex flex-col  ">
                     <div className=" flex text-sm justify-around text-white">
-                        <span className="cursor-pointer">1</span>
-                        <span className="cursor-pointer">2</span>
-                        <span className="cursor-pointer">3</span>
+                        <span className="cursor-pointer" onClick={() => changeTheme("bg-theme1-main-background")}>1</span>
+                        <span className="cursor-pointer"  onClick={() => changeTheme("bg-theme2-main-background")}>2</span>
+                        <span className="cursor-pointer"  onClick={() => changeTheme("bg-theme3-main-background")}>3</span>
                     </div>
                     <div className="bg-theme1-toggle-background w-16 h-7 rounded-full flex items-center  p-1 gap-1  ">
                         <div className=" w-4 h-4 rounded-full bg-theme1-key-red cursor-pointer"></div>
-                        <div className=" hidden w-4 h-4 rounded-full bg-theme2-key-orange cursor-pointer "></div>
-                        <div className=" hidden w-4 h-4 rounded-full bg-theme3-key-cyan cursor-pointer  "></div>
+                        <div className=" hidden w-4 h-4 rounded-full bg-theme2-key-orange cursor-pointer"></div>
+                        <div className=" hidden w-4 h-4 rounded-full bg-theme3-key-cyan cursor-pointer "></div>
                     </div>
                 </div>
             </div>
