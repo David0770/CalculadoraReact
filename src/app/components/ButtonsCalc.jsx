@@ -16,7 +16,7 @@ export default function Buttons() {
       <div className="grid grid-cols-4 gap-4 text-center">
 
         <button className={`${buttonClass} max-md:text-[2rem]`}>7</button>
-        <button className={buttonClass }>8</button>
+        <button className={buttonClass}>8</button>
         <button className={buttonClass}>9</button>
         <button className={buttonDelClass}> DEL</button>
         <button className={buttonClass}>4</button>
