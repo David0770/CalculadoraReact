@@ -35,6 +35,6 @@ yarn-error.log*
 next-env.d.ts
 design/
 next/
-.package-lock.json
-.postcss.config.js
-.tailwind.config.js
+
+postcss.config.js
+tailwind.config.js

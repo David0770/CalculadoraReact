@@ -21,7 +21,7 @@ module.exports = {
         'theme1-key-orange-shadow': 'hsl(28, 16%, 65%)',
         'theme1-text-very-dark-grayish-blue': 'hsl(221, 14%, 31%)',
         'theme1-text-white': 'hsl(0, 0%, 100%)',
-
+        
         'theme2-main-background': 'hsl(0, 0%, 90%)',
         'theme2-toggle-background': 'hsl(0, 5%, 81%)',
         'theme2-keypad-background': 'hsl(0, 5%, 81%)',
@@ -39,7 +39,9 @@ module.exports = {
         'theme3-keypad-background': 'hsl(268, 71%, 12%)',
         'theme3-screen-background': 'hsl(268, 71%, 12%)',
         'theme3-key-background': 'hsl(281, 89%, 26%)',
-        'theme3-key-shadow': 'hsl(285, 91%, 52%)',
+        'theme3-key-border': 'hsl(281, 57%, 59%)',
+        'theme3-key-hover': 'hsl(285, 75%, 35%)',
+        'theme3-key-shadow': 'hsl(285, 94%, 53%)',
         'theme3-key-cyan': 'hsl(176, 100%, 44%)',
         'theme3-key-cyan-shadow': 'hsl(177, 92%, 70%)',
         'theme3-text-light-yellow': 'hsl(52, 100%, 62%)',
