@@ -2,7 +2,6 @@
 import { useState } from "react"
 import RootLayout from "./layout"
 import HeadCalc from "./components/HeadCalc"
-import ResultsCalc from "./components/ResultsCalc"
 import ButtonsCalc from "./components/ButtonsCalc"
 
 
@@ -34,7 +33,6 @@ export default function Home() {
   const changeResetAndDeleteTheme = (newTheme) => setResetAndDeleteThemeButtons(newTheme);
   const changeResetAndDeleteHover = (newTheme) => setDeleteHoverButtons(newTheme);
   const changeResetAndeDeleteBorder = (newTheme) => setResetAndDeleteBorder(newTheme);
-
   const changeButtonEqualBackground = (newTheme) => setButtonEqualBackground(newTheme);
   const changeButtonEqualHover = (newTheme) => setButtonEqualHover(newTheme);
   const changeButtonEqualBorder = (newTheme) => setButtonEqualBorder(newTheme);
@@ -46,38 +44,29 @@ export default function Home() {
           onThemeChange={handleThemeChange}
           onThemeChangeResult={themeChangeResult}
           colorTextResult={colorChangeTextResult}
-
           onThemeChangeSectionButtons={themeChangeSectionButtons}
           onChangeBgButtons={changeBackgroundButtons}
           onColorTextButtons={changeColorTextButtons}
-
           onBorderTheme={changeColorBorderButtons}
           onHoverTheme={changeHoverButtons}
-
           onResetAndDeleteTheme={changeResetAndDeleteTheme}
           onResetAndDeleteHover={changeResetAndDeleteHover}
           onResetAndDelteBorder={changeResetAndeDeleteBorder}
-
           onButtonEqualBackground={changeButtonEqualBackground}
           onButtonEqualHover={changeButtonEqualHover}
           onButtonEqualBorder={changeButtonEqualBorder}
         />
-        <ResultsCalc
-          backgroundThemeResult={themeResult}
-          colorText={colorTextResult}
-        />
         <ButtonsCalc
+          themeResult={themeResult}
+          colorTextResult={colorTextResult}
           themeSectionButtons={themeSectionsButtons}
           backgroundButtons={backgroundButtons}
           colorTextButtons={colorTextButtons}
-
           borderTheme={colorBorderButtons}
           hoverButtons={hoverButtons}
-
           resetAndDeleteTheme={resetAndDeleteThemeButtons}
           resetAndDeleteHover={deleteHoverButtons}
           resetAndDeleteBorder={resetAndDeleteBorder}
-
           buttonEqualBackground={buttonEqualBackground}
           buttonEqualHover={buttonEqualHover}
           buttonEqualBorder={buttonEqualBorder}
