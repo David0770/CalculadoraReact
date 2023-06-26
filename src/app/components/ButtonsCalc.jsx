@@ -33,9 +33,11 @@ export default function Buttons({
   const insertValue = (event) => {
     const value = event.target.value;
     setOutputValue((prevValue) => {
+
       const newValue = Number(prevValue + value);
       return isNaN(newValue) ? 0 : newValue;
     });
+
     console.log(value);
   }
 
@@ -44,22 +46,20 @@ export default function Buttons({
   }
 
   const deleteValue = () => {
-    setOutputValue((prevNumber) => {
-      if (typeof prevNumber === "string" && prevNumber.length > 0) {
-        const newValue = prevNumber.slice(0, -1);
-        return newValue || 0;
-      }
-      return prevNumber;
-    });
+    setOutputValue(oldNumber);
+    setOldNumber(0);
+
   };
 
   const insertOperator = (event) => {
     const operator = event.target.value
+
     setArithmeticOperators(operator);
     setOutputValue(0);
     setOldNumber(outputValue);
-
+    console.log(operator)
   }
+
 
   const calculate = () => {
     let result;
@@ -90,7 +90,7 @@ export default function Buttons({
       <ResultsCalc
         backgroundThemeResult={themeResult}
         colorText={colorTextResult}
-        output={outputValue} // Passe o valor de outputValue como prop para ResultCalc
+        output={outputValue}
       />
 
       <div className={`w-full ${themeSectionButtons} p-5 rounded-md my-7`}>

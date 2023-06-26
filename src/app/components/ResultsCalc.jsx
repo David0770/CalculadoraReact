@@ -1,6 +1,6 @@
 
-export default function ResultsCalc({ backgroundThemeResult, colorText, output = 0 }) {
-    const outputLimited = output.toString().slice(0, 15);
+export default function ResultsCalc({ backgroundThemeResult, colorText, output }) {
+    const outputLimited = output.toString().slice(0, 12).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
     return (
         <div className={`${backgroundThemeResult} rounded-md p-10 max-md:p-7`}>
