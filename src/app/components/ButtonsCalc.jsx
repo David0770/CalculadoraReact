@@ -32,32 +32,28 @@ export default function Buttons({
 
   const insertValue = (event) => {
     const value = event.target.value;
-    setOutputValue((prevValue) => {
+    if (outputValue === 0) {
+      setOutputValue(value)
+    } else {
+      setOutputValue(outputValue + value)
+    }
 
-      const newValue = Number(prevValue + value);
-      return isNaN(newValue) ? 0 : newValue;
-    });
-
-    console.log(value);
   }
 
-  const reset = () => {
-    setOutputValue(0);
-  }
+
+  const reset = () => setOutputValue(0);
+
 
   const deleteValue = () => {
     setOutputValue(oldNumber);
     setOldNumber(0);
-
   };
 
   const insertOperator = (event) => {
     const operator = event.target.value
-
     setArithmeticOperators(operator);
     setOutputValue(0);
     setOldNumber(outputValue);
-    console.log(operator)
   }
 
 
@@ -65,21 +61,20 @@ export default function Buttons({
     let result;
     switch (arithmeticOperators) {
       case "+":
-        result = Number(outputValue + oldNumber);
+        result = parseFloat(oldNumber) + parseFloat(outputValue);
         break
       case "-":
-        result = Number(outputValue - oldNumber);
+        result = parseFloat(oldNumber) - parseFloat(outputValue);
         break
       case "x":
-        result = Number(outputValue * oldNumber);
+        result = parseFloat(oldNumber) * parseFloat(outputValue);
         break
       case "/":
-        result = Number(outputValue / oldNumber);
+        result = parseFloat(oldNumber) / parseFloat(outputValue);
         break
       default:
         break
     }
-    console.log(result);
     setOutputValue(result);
     setArithmeticOperators("");
   }
